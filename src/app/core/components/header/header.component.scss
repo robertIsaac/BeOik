@@ -1,0 +1,42 @@
+.main-nav {
+  background-color: #383842;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+
+  .navbar {
+    background: transparent !important;
+    color: #fff;
+    padding: 18px;
+
+    .navbar-brand {
+      color: #fff;
+    }
+
+    .navbar-collapse {
+      .nav-link {
+        color: #fff;
+      }
+
+    }
+
+    form {
+      justify-content: flex-end;
+    }
+
+    form .btn {
+      background-color: #1D7874 !important;
+      border: none;
+    }
+
+    .navbar-nav {
+      padding: 0;
+    }
+  }
+}
+
+.hvr-underline-from-right:before {
+  background-color: #1D7874;
+}
+
+.active > .hvr-underline-from-right:before {
+  left: 0;
+}

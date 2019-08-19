@@ -1,1 +1,29 @@
-<p>header works!</p>
+<div class="main-nav shadow">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" routerLink="/">BeOik</a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" style=""
+              type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li [routerLinkActiveOptions]="{exact: true}" class="nav-item ml-2" routerLinkActive="active">
+            <a #home class="nav-link hvr-underline-from-right" routerLink="/">الرئيسيه</a>
+          </li>
+          <li class="nav-item ml-2" routerLinkActive="active">
+            <a class="nav-link hvr-underline-from-right" routerLink="books">كتب</a>
+          </li>
+          <li class="nav-item ml-2" routerLinkActive="active">
+            <a class="nav-link hvr-underline-from-right" routerLink="articles">مقالات</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <button class="btn btn-success my-2 my-sm-0" type="button">تسجيل دخول</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>
