@@ -21,6 +21,5 @@ jobs:
       run: |
         npm install
         npm run deploy --if-present
-        npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       env:
         CI: true
