@@ -1,1 +1,17 @@
-<p>articles-list works!</p>
+<div *ngIf="articles$ | async as articles" class="card-news articles ">
+  <div class="container">
+    <h3 class="h3">مقالات</h3>
+    <div class="row">
+      <div *ngFor="let article of articles" class="col-md-3 col-sm-6">
+        <div class="card">
+          <img [alt]="article.titleAr" [src]="article.image" class="card-img-top" height="200">
+          <div class="card-body">
+            <h5 class="card-title">{{article.titleAr}}</h5>
+            <p class="card-text">{{article.shortDescripAr}}</p>
+            <a class="btn btn-primary">اقرا المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

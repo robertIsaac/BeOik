@@ -11,6 +11,12 @@ import { RatingModule } from 'ngx-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     RatingModule,
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RatingModule,
   ]
 })
 export class SharedModule {

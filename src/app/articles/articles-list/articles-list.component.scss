@@ -1,0 +1,31 @@
+.card-news.articles {
+  margin: 10px;
+
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 4px;
+      text-align: center;
+      bottom: 0;
+      height: 2px;
+      width: 100px;
+      background-color: #1d7874;
+    }
+  }
+
+  .card {
+    border-radius: 0 0 calc(7px - 1px) calc(7px - 1px);
+    margin-bottom: 10px;
+
+    .card-body {
+      border-radius: 0 0 calc(7px - 1px) calc(7px - 1px);
+    }
+  }
+
+}

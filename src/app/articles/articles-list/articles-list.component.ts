@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-articles-list',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesListComponent implements OnInit {
 
-  constructor() {
+  articles$ = this.articlesService.getAll();
+
+  constructor(
+    protected articlesService: ArticlesService
+  ) {
   }
 
   ngOnInit() {
