@@ -11,7 +11,7 @@ import { BooksService } from '../services/books.service';
   styleUrls: ['./book-details.component.scss']
 })
 export class BookDetailsComponent implements OnInit {
-  private book$: Observable<Book>;
+  book$: Observable<Book>;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
