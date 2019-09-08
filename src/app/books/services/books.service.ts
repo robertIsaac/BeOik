@@ -17,4 +17,8 @@ export class BooksService {
   getAll(): Observable<Book[]> {
     return this.httpClient.get<Book[]>(environment.ApiUrl + 'Book/GetAll');
   }
+
+  getBook(bookId: string): Observable<Book> {
+    return this.httpClient.get<Book>(`${environment.ApiUrl}/Book/BookDetails/${bookId}`);
+  }
 }

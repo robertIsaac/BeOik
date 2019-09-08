@@ -1,1 +1,30 @@
-<p>book-details works!</p>
+<div *ngIf="book$ | async as book" class="card-news articlesDetials ">
+  <div class="container m-5">
+    <h3 class="h3">{{book.nameAr}}</h3>
+    <div class="card-style">
+      <div class="row">
+        <div class="col-sm-4">
+
+          <div class="img">
+            <img [alt]="book.nameAr" [src]="book.image">
+          </div>
+
+        </div>
+        <div class="col-sm-8">
+          <h4>تقييم الكتاب</h4>
+          <rating [customTemplate]="star" [max]="5" [ngModel]="book.rating" [readonly]="true"></rating>
+          <h4 class="mt-5">تقييمك للكتاب</h4>
+          <rating [customTemplate]="star" [max]="5"></rating>
+        </div>
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="discr">
+              <p>{{book.longDescripAr}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #star><i class="fas fa-star"></i></ng-template>

@@ -1,0 +1,78 @@
+// Cards articlesDetials Style
+.card-news.articlesDetials {
+  margin: 10px;
+
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+      height: 2px;
+      width: 100px;
+      background-color: #1d7874;
+    }
+  }
+
+  .card-style {
+    padding: 15px;
+    box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+
+    .img {
+      height: 200px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .card {
+      box-shadow: 0 0 0 0;
+      // border-radius: 25px;
+      border: none;
+      margin-bottom: 15px;
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.realationLinks {
+  h3 {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 4px;
+      bottom: 0;
+      height: 2px;
+      width: 100px;
+      background-color: #1d7874;
+    }
+  }
+
+  .card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #fff;
+    background-color: #1d7874;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+}
+
+:host ::ng-deep .active .fa-star {
+  color: orange;
+}
