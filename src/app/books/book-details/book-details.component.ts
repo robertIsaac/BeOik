@@ -12,7 +12,7 @@ import { BooksService } from '../services/books.service';
 })
 export class BookDetailsComponent implements OnInit {
   book$: Observable<Book>;
-  private relatedBooks$: Observable<Book[]>;
+  relatedBooks$: Observable<Book[]>;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
