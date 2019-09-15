@@ -12,6 +12,7 @@ import { BooksService } from '../services/books.service';
 })
 export class BookDetailsComponent implements OnInit {
   book$: Observable<Book>;
+  private relatedBooks$: Observable<Book[]>;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
@@ -23,6 +24,12 @@ export class BookDetailsComponent implements OnInit {
     this.book$ = this.activatedRoute.paramMap.pipe(
       switchMap(params => {
         return this.booksService.getBook(params.get('bookId'));
+      })
+    );
+
+    this.relatedBooks$ = this.activatedRoute.paramMap.pipe(
+      switchMap(params => {
+        return this.booksService.getRelatedBooks$(params.get('bookId'));
       })
     );
   }
